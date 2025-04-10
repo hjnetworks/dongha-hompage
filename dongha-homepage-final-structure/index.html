@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>동하통상 Dongha Corporation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #222;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #103A73;
+      font-weight: 500;
+    }
+    .slider {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 12s infinite;
+    }
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .slide::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+    }
+    .slide-content {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      color: white;
+      z-index: 2;
+    }
+    .slide-content h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+    .slide-content p {
+      font-size: 18px;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(0); }
+      36% { transform: translateX(-100%); }
+      66% { transform: translateX(-100%); }
+      69% { transform: translateX(-200%); }
+      99% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+    .services {
+      padding: 60px 0;
+      background: #f4f7fb;
+    }
+    .services h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #103A73;
+      margin-bottom: 40px;
+    }
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .tile {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 30px 20px;
+      text-align: center;
+      transition: box-shadow 0.3s;
+    }
+    .tile:hover {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    .footer-main {
+      background: #2D2D2D;
+      color: #ccc;
+      padding: 40px 20px;
+    }
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+    .footer-col {
+      flex: 1;
+      min-width: 240px;
+      margin: 20px;
+    }
+    .footer-col h3 {
+      color: #fff;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+    .footer-col p {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+    .footer-bottom {
+      background: #1c1c1c;
+      color: #aaa;
+      font-size: 13px;
+      text-align: center;
+      padding: 14px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div><strong>동하통상</strong></div>
+      <nav>
+        <a href="about.html">회사소개</a>
+        <a href="product-center.html">제품소개</a>
+        <a href="technical-support.html">기술지원</a>
+        <a href="#contact">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="slider">
+    <div class="slides">
+      <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/103A73/ffffff?text=고품질+전기부품');">
+        <div class="slide-content">
+          <h1>고품질 전력기기 전문</h1>
+          <p>개폐기, 차단기, 제어기기까지 산업 전반 대응</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/2C3E50/ffffff?text=전력+자동화+솔루션');">
+        <div class="slide-content">
+          <h1>전력 자동화 솔루션</h1>
+          <p>안정성과 효율을 높이는 통합 시스템</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400/1ABC9C/ffffff?text=글로벌+네트워크');">
+        <div class="slide-content">
+          <h1>글로벌 네트워크</h1>
+          <p>미국, 유럽, 아시아 15개국 거래처</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="services" id="products">
+    <h2>Service Items</h2>
+    <div class="tiles">
+      <div class="tile">
+        <h3><a href="product-center.html" style="text-decoration:none; color:#103A73;">Product Center</a></h3>
+        <p>접촉기, 퓨즈, 배터리 등 산업용 부품</p>
+      </div>
+      <div class="tile">
+        <h3><a href="technical-support.html" style="text-decoration:none; color:#103A73;">Technical Support</a></h3>
+        <p>기술 상담, 사양서 제공, 설계 협업</p>
+      </div>
+      <div class="tile">
+        <h3><a href="about.html" style="text-decoration:none; color:#103A73;">About Dongha</a></h3>
+        <p>30년 전력기기 수입유통 전문 기업</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-main">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h3>동하통상</h3>
+        <p>전력 자동화 전문 기업으로서</p>
+        <p>고품질 솔루션과 기술지원을 제공합니다.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>주소: 경기도 용인시 기흥구 흥덕중앙로 120</p>
+        <p>전화: 031-718-9863</p>
+        <p>이메일: donghaco@gmail.com</p>
+      </div>
+      <div class="footer-col">
+        <h3>Join Us</h3>
+        <p>기술지원 및 유통 제휴 환영합니다.</p>
+        <p>donghaco@naver.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 동하통상 DONGHA CORPORATION. All rights reserved.
+  </div>
+</body>
+</html>
