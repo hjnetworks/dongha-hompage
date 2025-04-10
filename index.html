@@ -1,87 +1,123 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
   <title>동하통상 Dongha Corporation</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f8f9fa;
-      color: #333;
+      background: #ffffff;
+      color: #222;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
     header {
-      background: #003366;
-      color: white;
-      padding: 20px 0;
+      background: white;
+      border-bottom: 1px solid #ddd;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
-    header .container {
-      width: 1200px;
-      margin: 0 auto;
+    .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      height: 64px;
     }
-    nav a {
-      color: white;
-      margin-left: 20px;
+    .nav a {
+      color: #103A73;
       text-decoration: none;
+      margin-left: 24px;
+      font-weight: 500;
       font-size: 15px;
     }
     .hero {
-      background: url('https://via.placeholder.com/1200x300?text=Dongha+Hero+Banner') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 32px;
-      font-weight: bold;
-    }
-    .section {
-      width: 1200px;
-      margin: 60px auto;
-    }
-    .section h2 {
-      font-size: 26px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #003366;
-      padding-bottom: 10px;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-    .product-card {
-      background: white;
-      border: 1px solid #ddd;
-      padding: 20px;
+      background: #f1f5f9;
+      padding: 80px 0;
       text-align: center;
     }
-    .product-card img {
+    .hero h1 {
+      font-size: 36px;
+      color: #103A73;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #444;
+    }
+    .products {
+      background: #ffffff;
+      padding: 60px 0;
+    }
+    .products h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #103A73;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #e0e0e0;
+      transition: box-shadow 0.3s;
+      text-align: center;
+      padding: 16px;
+    }
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card img {
       width: 100%;
-      height: 160px;
+      height: 180px;
       object-fit: cover;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+      color: #103A73;
+    }
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+    .contact {
+      background: #f9fafb;
+      padding: 60px 0;
+    }
+    .contact h2 {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #103A73;
+    }
+    .contact p {
+      text-align: center;
+      margin: 6px 0;
+      color: #333;
     }
     footer {
-      background: #222;
-      color: #ccc;
+      background: #103A73;
+      color: #ffffff;
       text-align: center;
-      padding: 30px 0;
-      margin-top: 60px;
+      padding: 24px 0;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <div><strong>동하통상</strong></div>
+    <div class="container nav">
+      <div style="font-weight: bold; font-size: 18px;">동하통상</div>
       <nav>
         <a href="#about">회사소개</a>
         <a href="#products">제품소개</a>
@@ -90,39 +126,53 @@
     </div>
   </header>
 
-  <div class="hero">산업용 전기부품 전문 유통회사</div>
+  <section class="hero">
+    <div class="container">
+      <h1>전력 산업의 신뢰받는 파트너</h1>
+      <p>고전압 부품부터 자동화 제어기기까지, 믿을 수 있는 산업용 솔루션 제공</p>
+    </div>
+  </section>
 
-  <div class="section" id="products">
-    <h2>제품 카테고리</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x180?text=Contactor" alt="Contactor">
-        <h3>접촉기 / 릴레이</h3>
-        <p>Siemens, Schneider Electric 등 제어 부품</p>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x180?text=Switch" alt="Switch">
-        <h3>스위치</h3>
-        <p>마이크로, 리미트, 압력, 캠 스위치</p>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x180?text=Battery" alt="Battery">
-        <h3>배터리 / 모터</h3>
-        <p>DC 모터, 서보모터, 리튬이온 배터리</p>
+  <section id="products" class="products">
+    <div class="container">
+      <h2>제품 카테고리</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x180?text=Contactor" alt="Contactor" />
+          <h3>접촉기 / 릴레이</h3>
+          <p>제어 부품: Siemens, Omron 등</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x180?text=Switch" alt="Switch" />
+          <h3>스위치</h3>
+          <p>리미트, 마이크로, 압력 스위치</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x180?text=Fuse" alt="Fuse" />
+          <h3>퓨즈 / 저항</h3>
+          <p>고전압 퓨즈, Power Fuse 등</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x180?text=Power+Supply" alt="Power" />
+          <h3>전자부품 / 전원</h3>
+          <p>IGBT, TR, COSEL, MEANWELL</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section" id="contact">
-    <h2>문의하기</h2>
-    <p>담당자: 홍준식 과장</p>
-    <p>전화: 031-718-9863 | 모바일: 010-9988-3704</p>
-    <p>이메일: donghaco@gmail.com / donghaco@naver.com</p>
-    <p>주소: 경기도 용인시 기흥구 흥덕중앙로 120, U-TOWER 2407호</p>
-  </div>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>문의하기</h2>
+      <p>담당자: 홍준식 과장</p>
+      <p>전화: 031-718-9863 | 모바일: 010-9988-3704</p>
+      <p>이메일: donghaco@gmail.com / donghaco@naver.com</p>
+      <p>주소: 경기도 용인시 기흥구 흥덕중앙로 120, U-TOWER 2407호</p>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 동하통상 DONGHA CORPORATION. All rights reserved.
+    &copy; 2025 동하통상. All rights reserved.
   </footer>
 </body>
 </html>
