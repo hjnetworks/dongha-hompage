@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>제품소개 - 동하통상</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9f9f9; }
+    header { background: #103A73; color: white; padding: 20px; text-align: center; }
+    main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    h1 { font-size: 28px; margin-bottom: 30px; text-align: center; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ddd;
+      transition: 0.3s;
+    }
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      max-height: 160px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+    .card h3 {
+      margin: 0;
+      color: #103A73;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #103A73;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    footer {
+      background: #103A73;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>제품소개 Product Center</h1>
+  </header>
+  <main>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/200x120?text=Contactor" alt="Contactor">
+        <h3>접촉기 / 릴레이</h3>
+        <a href="product-contactor.html">자세히 보기 →</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x120?text=Fuse" alt="Fuse">
+        <h3>퓨즈 / 저항</h3>
+        <a href="product-fuse.html">자세히 보기 →</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x120?text=Battery" alt="Battery">
+        <h3>배터리 / 전원</h3>
+        <a href="product-battery.html">자세히 보기 →</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 동하통상 DONGHA CORPORATION. All rights reserved.
+  </footer>
+</body>
+</html>
