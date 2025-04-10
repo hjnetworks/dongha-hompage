@@ -5,10 +5,25 @@
   <meta name="viewport" content="width=device-width" />
   <title>제품소개 - 동하통상</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9f9f9; }
-    header { background: #103A73; color: white; padding: 20px; text-align: center; }
-    main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-    h1 { font-size: 28px; margin-bottom: 30px; text-align: center; }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9fafc; }
+    header {
+      background: #e9eef6;
+      color: #103A73;
+      padding: 36px 20px;
+      text-align: center;
+      border-bottom: 1px solid #d0d8e4;
+    }
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      color: #103A73;
+      text-align: center;
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -18,11 +33,11 @@
       background: white;
       padding: 20px;
       text-align: center;
-      border: 1px solid #ddd;
+      border: 1px solid #ccd4df;
       transition: 0.3s;
     }
     .card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-color: #103A73;
     }
     .card img {
       width: 100%;
@@ -33,6 +48,7 @@
     .card h3 {
       margin: 0;
       color: #103A73;
+      font-size: 18px;
     }
     .card a {
       display: inline-block;
@@ -42,12 +58,13 @@
       font-size: 14px;
     }
     footer {
-      background: #103A73;
-      color: white;
+      background: #f4f7fb;
+      color: #666;
       text-align: center;
       padding: 20px;
       margin-top: 60px;
       font-size: 13px;
+      border-top: 1px solid #ccd4df;
     }
   </style>
 </head>
